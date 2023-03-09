@@ -1,0 +1,60 @@
+:root{
+ --console-body: #c8020b; 
+ --console-bg: #cad4d6;
+ --text-color: #e9c64b;
+ --main-bg: #ffffff;
+
+
+
+}
+html{
+  box-sizing: border-box;
+  font-size: 100%; 
+}
+
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: 'ArcadeClassic';
+  src: url(./fonts/ArcadeClassic.woff2) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body{
+  background-color: var(--main-bg);
+  font-family: 'ArcadeClassic';
+}
+
+.wrapper{
+  width: 100%;
+  height: 100vh;
+  display: grid;
+}
+.console{
+  background-color: var(--console-body);
+  width: 80%;
+  height: 95vh;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow:inset rgba(231, 85, 85, 0.45) -5px -5px 9px, inset rgba(243, 85, 11, 0.286) 5px 5px 7px;
+}
+.console h1{
+  margin: 20px auto;
+  width: 250px;
+  color: var(--text-color);
+  word-spacing: 6px;
+}
+.screen{
+  width: 80%;
+  height: 80%;
+  background-color: var(--console-bg);
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: rgba(255, 255, 255, 0.45) -5px -5px 9px,  rgba(94, 104, 121, 0.286) 5px 5px 7px;
+}
