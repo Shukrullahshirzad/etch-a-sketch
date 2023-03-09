@@ -43,6 +43,7 @@ body{
   margin: auto;
   border-radius: 10px;
   box-shadow:inset rgba(231, 85, 85, 0.45) -5px -5px 9px, inset rgba(243, 85, 11, 0.286) 5px 5px 7px;
+  position: relative;
 }
 .console h1{
   margin: 20px auto;
@@ -51,10 +52,28 @@ body{
   word-spacing: 6px;
 }
 .screen{
-  width: 80%;
+  width: 70%;
   height: 80%;
   background-color: var(--console-bg);
   margin: auto;
   border-radius: 5px;
   box-shadow: rgba(255, 255, 255, 0.45) -5px -5px 9px,  rgba(94, 104, 121, 0.286) 5px 5px 7px;
+}
+.roller{
+  width: 100px;
+  height: 100px;
+  background-color: var(--main-bg);
+  border: black 2px solid;
+  border-radius: 100%;
+  position: absolute;
+  
+
+}
+.roller.right{
+  bottom: 1px;
+  left: 15px;
+}
+.roller.left{
+  bottom: 1px;
+  right: 15px;
 }
