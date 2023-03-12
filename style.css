@@ -61,30 +61,22 @@ body{
 }
 .controls{
   width: 110px;
-  height: 150px;
+  /* height: 150px; */
   background-color: #f3f1ed;
   border-radius: 5px;
   position:absolute;
   box-shadow: rgba(255, 255, 255, 0.45) 5px 5px 9px,rgba(94, 104, 121, 0.286) 5px 5px 7px;
-}
-.controls.sketch-size{
   bottom: 120px;
   left: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  
 }
-.controls.sketch-colors{
-  bottom: 300px;
-  left: 20px;
-}
-.grid-size{
-  width: 90%;
-  margin: 5px auto 10px;
-}
-#grid-color{
-  margin: 5px auto 10px;
-}
+
 .controls>*{
   display: block;
+  margin: 5px;
 }
 /* button styling  */
 .controls button{
