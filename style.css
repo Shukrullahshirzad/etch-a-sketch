@@ -53,7 +53,8 @@ body{
 }
 .screen{
   width: 70%;
-  height: 80%;
+  aspect-ratio: 2/1.2;
+
   background-color: var(--console-bg);
   margin: auto;
   border-radius: 5px;
