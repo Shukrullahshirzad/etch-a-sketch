@@ -1,15 +1,25 @@
 let screen = document.querySelector(".screen");
-function createGrid(){
-  let gridHeigth = parseInt(document.querySelector("#grid-heigth").value);
-  let gridWidth = parseInt(document.querySelector("#grid-width").value);
-  let squareNumber = gridHeigth * gridWidth;
-  for(let i = 0; i<squareNumber; i++){
-    let newEl = document.createElement("div");
-    screen.appendChild(newEl);
-    newEl.classList.add("grid-div");
-  }
+let screenWidth = document.querySelector(".screen").offsetWidth;
+let screenHeight = document.querySelector(".screen").offsetHeight;
+let size = [...document.querySelectorAll(".grid-btn")];
+let selectedSize = 100;
 
+// add event listener to size buttons
+for(item of size){
+    item.addEventListener("click",(e)=>{
+        selectedSize = parseInt(e.target.classList[0]);
+    })
 }
-let createGridBtn = document.querySelector(".create-grid-btn");
+let squareNumber = (screenHeight * screenWidth)/selectedSize;
+function createGrid(dimension){
+    for(let i = 0; i<squareNumber; i++){
+      let newEl = document.createElement("div");
+      screen.appendChild(newEl);
+      newEl.classList.add("grid-div");
+    }
+}
 
-createGridBtn.addEventListener("click", createGrid)
+let createGridBtn = document.querySelector(".create-grid-btn");
+createGridBtn.addEventListener("click", ()=>{
+    console.log(selectedSize)
+})

@@ -1,6 +1,6 @@
 :root{
  --console-body: #c8020b; 
- --console-bg: #cad4d6;
+ --console-bg: #e3ebec;
  --text-color: #e9c64b;
  --main-bg: #ffffff;
 
@@ -53,18 +53,29 @@ body{
 }
 .screen{
   width: 450px;
- height: 450px;
+  height: 450px;
   background-color: var(--console-bg);
   margin: auto;
-  border-radius: px;
   box-shadow: rgba(255, 255, 255, 0.45) -5px -5px 9px,  rgba(94, 104, 121, 0.286) 5px 5px 7px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 10px);
+  
+  float: ;
+
   /* gap: 1px; */
   
 }
 .screen > * {
-  
+  width: 10px;
+  height: 10px;
+  background-color: #e7e5e4;
+  border: 1px solid rgb(194, 181, 181);
+  float:left ;
+
+}
+.item{
+  width: 40px;
+  height: 40px;
+  background-color: #130f0d;
+  border: 1px solid white;
 }
 .grid-size{
   display: flex;
@@ -79,24 +90,20 @@ body{
   background-color: black;
 }
 .medium{
-  width: 20px;
-  height: 20px;
-  background-color: black;
-}
-.large{
   width: 30px;
   height: 30px;
   background-color: black;
 }
-.xlarge{
-  width: 40px;
-  height: 40px;
-  background-color: black;
-}
-.xxlarge{
+.large{
   width: 50px;
   height: 50px;
   background-color: black;
+}
+.grid-btn{
+  transition: all 0.4s;
+}
+.grid-btn:hover{
+  transform: rotate(45deg) scale(1.1);
 }
 .controls{
   width: 120px;
@@ -119,7 +126,6 @@ body{
 }
 .create-grid{
   width: 120px;
-  /* height: 150px; */
   background-color: #f3f1ed;
   border-radius: 5px;
   position:absolute;
@@ -137,12 +143,6 @@ body{
 }
 .create-grid>input{
   margin: 0.3rem 0rem;
-}
-.grid-div{
-  width: 10px;
-  height: 10px;
-  background-color: black;
-  border: 0.02rem solid white;
 }
 
 /* button styling  */
