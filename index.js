@@ -3,9 +3,10 @@ let screenWidth = document.querySelector(".screen").offsetWidth;
 let screenHeight = document.querySelector(".screen").offsetHeight;
 let size = [...document.querySelectorAll(".grid-btn")];
 let selectedSize = 100;
-let selectedClass;
+let selectedClass = "small";
 let rainbowColors = ["violet", "indigo", "blue", "green", "yellow", "orange", "red"];
 // add event listener to size buttons
+
 for(item of size){
     item.addEventListener("click",(e)=>{
         selectedSize = parseInt(e.target.classList[0]);
@@ -31,7 +32,9 @@ function createGrid(dimension){
 let createGridBtn = document.querySelector(".create-grid-btn");
 createGridBtn.addEventListener("click", ()=>{
     createGrid(selectedSize); 
-})
+});
+// defualt grid
+createGrid(selectedSize);
 
 // change the background color of the grid
 let colorBTN = document.querySelectorAll(".btn");
